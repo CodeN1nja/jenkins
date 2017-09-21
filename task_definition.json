@@ -1,0 +1,37 @@
+{
+    "taskDefinition": {
+        "status": "ACTIVE",
+        "family": "console-sample-app-static",
+        "placementConstraints": [],
+        "volumes": [],
+        "taskDefinitionArn": "arn:aws:ecs:us-east-1:218506419435:task-definition/console-sample-app-static:4",
+        "containerDefinitions": [
+            {
+                "environment": [],
+                "name": "simple-app",
+                "links": [],
+                "mountPoints": [],
+                "image": "httpd:2.4",
+                "essential": true,
+                "portMappings": [
+                    {
+                        "protocol": "tcp",
+                        "containerPort": 80,
+                        "hostPort": 80
+                    }
+                ],
+                "entryPoint": [
+                    "sh",
+                    "-c"
+                ],
+                "memory": 300,
+                "command": [
+                    "/bin/sh -c \"echo '<html> <head> <title>Amazon ECS Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Amazon ECS Sample App</h1> <h2>Congratulations!</h2> <p>Your application is now running on a container in Amazon ECS.</p> </div></body></html>' >  /usr/local/apache2/htdocs/index.html && httpd-foreground\""
+                ],
+                "cpu": 10,
+                "volumesFrom": []
+            }
+        ],
+        "revision": 4
+    }
+}
