@@ -4,5 +4,6 @@ node {
       // Get some code from a GitHub repository
       git 'https://github.com/CodeN1nja/jenkins.git'
       def out = sh script: 'ls', returnStdout: true
+      sh 'ls'
    }
 }
