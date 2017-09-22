@@ -6,5 +6,6 @@ node {
       def out = sh script: 'ls', returnStdout: true
       sh 'ls'
       sh 'sudo docker build -t zishanzee/poc .'
+      sh 'sudo docker push zishanzee/poc:latest'
    }
 }
