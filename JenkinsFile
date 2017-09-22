@@ -5,6 +5,6 @@ node {
       git 'https://github.com/CodeN1nja/jenkins.git'
       def out = sh script: 'ls', returnStdout: true
       sh 'ls'
-      sh 'docker build -t zishanzee/poc .'
+      sh 'sudo docker build -t zishanzee/poc .'
    }
 }
