@@ -1,9 +1,7 @@
 {
-        "status": "ACTIVE",
         "family": "console-sample-app-static",
         "placementConstraints": [],
         "volumes": [],
-        "taskDefinitionArn": "arn:aws:ecs:us-east-1:218506419435:task-definition/console-sample-app-static:4",
         "containerDefinitions": [
             {
                 "environment": [],
@@ -29,7 +27,9 @@
                 ],
                 "cpu": 10,
                 "volumesFrom": []
+                "status": "ACTIVE",
+                "taskDefinitionArn": "arn:aws:ecs:us-east-1:218506419435:task-definition/console-sample-app-static:4",
+                "revision": 4
             }
         ],
-        "revision": 4
     }
