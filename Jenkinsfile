@@ -8,7 +8,9 @@ node {
       sh 'sudo docker build -t zishanzee/poc .'
       sh 'sudo docker push zishanzee/poc:latest'
       sh 'sudo aws s3 ls'
-      def 'taskdef="$(sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1)"'
+      script{
+          def 'taskdef="$(sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1)"'
+      }
       sh 'echo $taskdef'
       sh 'rev="$(python revision.py $taskdef)"'
       sh 'echo $rev'
