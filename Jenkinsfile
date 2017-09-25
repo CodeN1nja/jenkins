@@ -9,6 +9,7 @@ node {
       sh 'sudo docker push zishanzee/poc:latest'
       sh 'sudo aws s3 ls'
       sh 'sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1'
+      sh 'rev=python revision.py'
       sh 'sudo aws ecs update-service --service sample-webapp --task-definition console-sample-app-static:3 --region us-east-1'
    }
 }
