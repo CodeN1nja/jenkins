@@ -25,11 +25,11 @@
                 "mountPoints": [],
                 "volumesFrom": [],
                 "cpu": 10
+                "revision": 3
             }
         ],
         "placementConstraints": [],
         "taskDefinitionArn": "arn:aws:ecs:us-east-1:218506419435:task-definition/console-sample-app-static:3",
         "volumes": [],
-        "family": "console-sample-app-static",
-        "revision": 3
+        "family": "console-sample-app-static"
 }
