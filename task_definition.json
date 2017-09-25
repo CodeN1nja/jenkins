@@ -1,4 +1,5 @@
 {
+    "taskDefinition": {
         "family": "console-sample-app-static",
         "placementConstraints": [],
         "volumes": [],
@@ -33,3 +34,4 @@
             }
         ]
     }
+}
