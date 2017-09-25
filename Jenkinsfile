@@ -7,5 +7,7 @@ node {
       sh 'ls'
       sh 'sudo docker build -t zishanzee/poc .'
       sh 'sudo docker push zishanzee/poc:latest'
+      sh 'aws ecs register-task-definition --cli-input-json --region us-east-1 file://task_definition.json'
+      sh 'aws ecs update-service --service sample-webapp --task-definition console-sample-app-static:3 --region us-east-1'
    }
 }
