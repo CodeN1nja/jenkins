@@ -1,16 +1,9 @@
 {
     "taskDefinition": {
-        "family": "console-sample-app-static",
-        "placementConstraints": [],
-        "volumes": [],
+        "status": "ACTIVE",
         "containerDefinitions": [
             {
                 "environment": [],
-                "name": "simple-app",
-                "links": [],
-                "mountPoints": [],
-                "image": "zishanzee/poc:latest",
-                "essential": true,
                 "portMappings": [
                     {
                         "protocol": "tcp",
@@ -18,20 +11,27 @@
                         "hostPort": 80
                     }
                 ],
+                "memory": 300,
+                "links": [],
+                "image": "zeetest:latest",
                 "entryPoint": [
                     "sh",
                     "-c"
                 ],
-                "memory": 300,
                 "command": [
                     "/bin/sh -c \"echo '<html> <head> <title>Amazon ECS Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Amazon ECS Sample App</h1> <h2>Congratulations!</h2> <p>Your application is now running on a container in Amazon ECS.</p> </div></body></html>' >  /usr/local/apache2/htdocs/index.html && httpd-foreground\""
                 ],
-                "cpu": 10,
+                "name": "simple-app",
+                "essential": true,
+                "mountPoints": [],
                 "volumesFrom": [],
-                "status": "ACTIVE",
-                "taskDefinitionArn": "arn:aws:ecs:us-east-1:218506419435:task-definition/console-sample-app-static:4",
-                "revision": 4
+                "cpu": 10
             }
-        ]
+        ],
+        "placementConstraints": [],
+        "taskDefinitionArn": "arn:aws:ecs:us-east-1:218506419435:task-definition/console-sample-app-static:3",
+        "volumes": [],
+        "family": "console-sample-app-static",
+        "revision": 3
     }
 }
