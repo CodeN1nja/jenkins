@@ -11,6 +11,8 @@ node {
       script{
           def 'taskdef="$(sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1)"'
       }
+   }
+   stage('2') {
       sh 'echo $taskdef'
       sh 'rev="$(python revision.py $taskdef)"'
       sh 'echo $rev'
