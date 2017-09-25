@@ -1,5 +1,4 @@
 {
-    "taskDefinition": {
         "status": "ACTIVE",
         "family": "console-sample-app-static",
         "placementConstraints": [],
@@ -34,4 +33,3 @@
         ],
         "revision": 4
     }
-}
