@@ -1,0 +1,32 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "jenkins",
+  "Resources" : {
+    "MyEC2Instance" : {
+      "Type" : "AWS::EC2::Instance",
+      "Properties" : {
+        "ImageId" : "ami-4fffc834",
+        "InstanceType" : "t2.micro",
+        "KeyName" : "test",
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sdm",
+            "Ebs" : {
+              "VolumeSize" : "20"
+            }
+          }
+        ],
+        "UserData" :  { "Fn::Base64" : { "Fn::Join" : ["", [
+          "#!/bin/bash -xe\n",
+          " yum -y remove java*\n",
+          "yum -y update\n",
+          "sudo yum -y install java-1.8.0-openjdk.x86_64\n",
+          "wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo\n",
+          "rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key\n",
+          "yum -y install jenkins\n",
+          "service jenkins start\n"
+          ]]}}
+      }
+    }
+  }
+}
