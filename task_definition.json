@@ -31,5 +31,5 @@
                 "taskDefinitionArn": "arn:aws:ecs:us-east-1:218506419435:task-definition/console-sample-app-static:4",
                 "revision": 4
             }
-        ],
+        ]
     }
