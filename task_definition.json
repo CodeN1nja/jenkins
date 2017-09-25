@@ -1,5 +1,4 @@
 {
-    "taskDefinition": {
         "status": "ACTIVE",
         "containerDefinitions": [
             {
@@ -33,5 +32,4 @@
         "volumes": [],
         "family": "console-sample-app-static",
         "revision": 3
-    }
 }
