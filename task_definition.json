@@ -24,7 +24,7 @@
                 "essential": true,
                 "mountPoints": [],
                 "volumesFrom": [],
-                "cpu": 10
+                "cpu": 10,
                 "revision": 3
             }
         ],
