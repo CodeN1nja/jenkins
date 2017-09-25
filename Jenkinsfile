@@ -8,8 +8,8 @@ node {
       sh 'sudo docker build -t zishanzee/poc .'
       sh 'sudo docker push zishanzee/poc:latest'
       sh 'sudo aws s3 ls'
-      sh 'rev=sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1'
-      sh 'rev=python revision.py $rev'
+      sh 'rev = sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1'
+      sh 'rev = python revision.py $rev'
       sh 'echo $rev'
       sh 'sudo aws ecs update-service --service sample-webapp --task-definition console-sample-app-static:$rev --region us-east-1'
    }
