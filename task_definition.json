@@ -1,5 +1,4 @@
 {
-        "status": "ACTIVE",
         "containerDefinitions": [
             {
                 "environment": [],
@@ -24,12 +23,10 @@
                 "essential": true,
                 "mountPoints": [],
                 "volumesFrom": [],
-                "cpu": 10,
-                "revision": 3
+                "cpu": 10
             }
         ],
         "placementConstraints": [],
-        "taskDefinitionArn": "arn:aws:ecs:us-east-1:218506419435:task-definition/console-sample-app-static:3",
         "volumes": [],
         "family": "console-sample-app-static"
 }
