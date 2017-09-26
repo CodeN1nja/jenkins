@@ -8,7 +8,7 @@ node {
       sh 'sudo docker build -t zishanzee/poc .'
       sh 'sudo docker push zishanzee/poc:latest'
       sh 'sudo aws s3 ls'
-      def taskdef = sh ('sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1' return true)
+      def taskdef = sh ('sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1', return true)
       sh 'echo $taskdef'
    }
    stage('2') {
