@@ -1,6 +1,6 @@
 import json
-import sys
 
-data = sys.argv[1]
+with open('taskdef.json') as data_file:    
+    data = json.load(data_file)
    
-print data["taskDefinition"]["revision"]
+return data["taskDefinition"]["revision"]
