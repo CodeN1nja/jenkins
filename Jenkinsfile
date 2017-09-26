@@ -10,7 +10,7 @@ node {
       sh 'sudo aws s3 ls'
       sh 'sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1 > taskdef.json'
       sh 'taskdef=`cat taskdef.json`'
-      echo $taskdef
+      sh 'echo $taskdef'
    }
    stage('2') {
       sh 'echo $taskdef'
