@@ -9,7 +9,7 @@ node {
       sh 'sudo docker push zishanzee/poc:latest'
       sh 'sudo aws s3 ls'
       sh 'sudo aws ecs register-task-definition --cli-input-json file://task_definition.json --region us-east-1 > taskdef.json'
-      sh 'taskdef = `cat taskdef.json`'
+      sh 'taskdef=`cat taskdef.json`'
       echo $taskdef
    }
    stage('2') {
