@@ -14,8 +14,8 @@ node {
    }
    stage('2') {
       sh 'echo $taskdef'
-      sh 'rev="$(python revision.py taskdef.json)"'
-      sh 'echo $rev'
-      sh 'sudo aws ecs update-service --service sample-webapp --task-definition console-sample-app-static:$rev --region us-east-1'
+      sh 'python revision.py taskdef.json > rev'
+      sh 'cat rev'
+      sh 'sudo aws ecs update-service --service sample-webapp --task-definition console-sample-app-static:$(cat rev) --region us-east-1'
    }
 }
