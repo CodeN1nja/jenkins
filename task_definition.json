@@ -11,7 +11,7 @@
                 ],
                 "memory": 300,
                 "links": [],
-                "image": "zeetest:latest",
+                "image": "zishanzee/poc:latest",
                 "entryPoint": [
                     "sh",
                     "-c"
